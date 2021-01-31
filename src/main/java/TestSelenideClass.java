@@ -9,10 +9,11 @@ public class TestSelenideClass {
     String login = "standard_user";
     String pass = "secret_sauce";
     String passgavno = "secrt_sauce";
-
+private MainPage mainPage;
 
     TestSelenideClass(){
         loginPage = new Login();
+        mainPage = new MainPage();
     }
 
     @Test
@@ -26,8 +27,14 @@ public class TestSelenideClass {
         loginPage.setPassword(pass)
                 .clickLoginBtn()
                 .checkUserLoggedIn(true);
-
+        mainPage.clickMenuBtn()
+                .clickLogoutBtn()
+                .setLogin(login)
+                .setPassword(pass)
+                .clickLoginBtn()
+                .checkUserLoggedIn(true);
     }
+
 
 
 }
