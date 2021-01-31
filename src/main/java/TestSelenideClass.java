@@ -22,7 +22,7 @@ public class TestSelenideClass {
                 .setPassword(passgavno)
                 .clickLoginBtn()
                 .checkUserLoggedIn(false);
-        Assert.assertFalse(loginPage.getText().contains("usernames"), "Check that element " + loginPage.getText() + " contains text 'usernames");
+        Assert.assertTrue(loginPage.getText().contains("usernames"), "Check that element " + loginPage.getText() + " contains text 'usernames");
     }
 
 
