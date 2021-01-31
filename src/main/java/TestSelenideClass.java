@@ -23,9 +23,9 @@ public class TestSelenideClass {
                 .clickLoginBtn()
                 .checkUserLoggedIn(false);
         Assert.assertTrue(loginPage.getText().contains("usernames"), "Check that element " + loginPage.getText() + " contains text 'usernames");
-loginPage.setPassword(pass)
-        .clickLoginBtn()
-        .checkUserLoggedIn(true);
+        loginPage.setPassword(pass)
+                .clickLoginBtn()
+                .checkUserLoggedIn(true);
 
     }
 
